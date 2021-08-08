@@ -16,6 +16,7 @@ s2 = '      batmanbat'
 s3 = 'batmanbat      '
 s4 = 'tabBatmanabt'
 s5 = 'tabatbBatwomentabbat'
+
 chars = 'bat'
 regex_strip(s1, chars)
 regex_strip(s2, chars)

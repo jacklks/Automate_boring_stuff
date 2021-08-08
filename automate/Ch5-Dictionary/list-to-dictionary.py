@@ -9,7 +9,7 @@ def displayInventory(inventory):
 
 def addToInventory(inventory, addedItems):
     for i in range(len(addedItems)):
-        if addedItems[i] in inv.keys():
+        if addedItems[i] in inventory.keys():
             inventory[addedItems[i]] += 1
         else:
             inventory.setdefault(addedItems[i], 1)

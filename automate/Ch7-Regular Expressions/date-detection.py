@@ -18,7 +18,7 @@ def transfer(day, month, year):
 
 
 while True:
-    print('Enter a date, I will tell you it is valid or not.')
+    print('Enter a date, I will tell you if it is valid or not.')
     enterday = input()
     mo = dateRegex.findall(enterday)
     day, month, year = mo[0]

@@ -3,7 +3,7 @@ import re
 
 # create phone regex
 phoneRegex = re.compile(r'''(
-    (\d{3}|\(\d{3}\))?         # area code
+    (\d{3}|\(\d{3}\))?              # area code
     (\s|-|\.)?                      # separator
     (\d{3})                         # first 3 digits
     (\s|-|\.)                       # separator

@@ -5,8 +5,9 @@ import os
 import re
 import shutil
 
+folder = os.path.abspath('C:/Users/steve/Documents/StevenDD/20210723')
 folder = input("Enter the absolute path of the folder you'd like to search: ")
-
+prefix = 'steven'
 prefix = input("Enter the prefix (up to the numbering) of the files whose"
                "numbering you'd like to check: ")
 

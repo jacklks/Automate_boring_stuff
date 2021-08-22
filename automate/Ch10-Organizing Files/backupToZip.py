@@ -1,5 +1,18 @@
 import zipfile
 import os
+from pathlib import Path
+
+p = Path.home()
+p.mkdir
+Path(p/'spam').mkdir()
+Path.cwd()
+os.chdir(p/'spam')
+Path.cwd()
+baconFile = open('bacon.txt', 'w')
+baconFile.write('To be backed up\n')
+baconFile.close()
+
+# 正文
 
 
 def backupToZip(folder):
@@ -10,7 +23,7 @@ def backupToZip(folder):
     number = 1
     while True:
         zipFilename = os.path.basename(folder) + '_' + str(number) + '.zip'
-        if not os.path.exists(zipFilename):
+        if not os.path.exists(zipFilename):  # 如果此路徑不存在名字相同的檔案則break
             break
         number = number + 1
     # Create the ZIP file.
@@ -28,8 +41,11 @@ def backupToZip(folder):
             if filename.startswith(newBase) and filename.endswith('.zip'):
                 continue
             backupZip.write(os.path.join(foldername, filename))
-        backupZip.close()
-        print('Done.')
+    backupZip.close()
+    print('Done.')
 
 
-backupToZip('C:\\deliciouss')
+folder = Path.cwd()
+backupToZip(Path.cwd())  # WindowsPath('C:/Users/user/spam')
+abspath = os.path.abspath(Path.cwd())
+os.path.basename(abspath)

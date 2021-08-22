@@ -4,10 +4,27 @@
 import os
 import re
 import shutil
+from pathlib import Path
+import random
 
-folder = os.path.abspath('C:/Users/steve/Documents/StevenDD/20210723')
+p = Path.home()
+os.chdir(p/'spam')
+numlist = [1]
+spamFile = open('spam00{}.txt'.format(numlist[0]), 'w')
+spamFile.write('Hello, there!\n')
+spamFile.close()
+
+for i in range(5):
+    randomNumber = random.randint(2, 9)
+    if randomNumber not in numlist:
+        numlist.append(random.randint(2, 9))
+        spamFile = open('spam00{}.txt'.format(numlist[len(numlist)-1]), 'w')
+        spamFile.write('Hello, there!\n')
+        spamFile.close()
+
+folder = os.path.abspath(Path.cwd())
 folder = input("Enter the absolute path of the folder you'd like to search: ")
-prefix = 'steven'
+prefix = 'spam'
 prefix = input("Enter the prefix (up to the numbering) of the files whose"
                "numbering you'd like to check: ")
 

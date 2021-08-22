@@ -35,7 +35,7 @@ for filename in Path(p / 'documents').glob('*.txt'):
     print(filename)
     os.unlink(filename)  # delete spam & spam2 txt files.
 # send2trash module send to recycle bin
-baconFile = open('bacon.txt', 'a')  # creates the file
+baconFile = open('bacon.doc', 'a')  # creates the file
 baconFile.write('Bacon is not a vegetable.')
 baconFile.close()
 send2trash.send2trash('bacon.txt')

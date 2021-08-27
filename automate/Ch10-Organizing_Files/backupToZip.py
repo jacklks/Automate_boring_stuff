@@ -3,7 +3,6 @@ import os
 from pathlib import Path
 
 p = Path.home()
-p.mkdir
 Path(p/'spam').mkdir()
 Path.cwd()
 os.chdir(p/'spam')
@@ -46,6 +45,7 @@ def backupToZip(folder):
 
 
 folder = Path.cwd()
+folder
 backupToZip(Path.cwd())  # WindowsPath('C:/Users/user/spam')
 abspath = os.path.abspath(Path.cwd())
 os.path.basename(abspath)

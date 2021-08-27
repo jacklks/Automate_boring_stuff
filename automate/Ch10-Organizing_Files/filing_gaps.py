@@ -17,10 +17,12 @@ spamFile.close()
 for i in range(5):
     randomNumber = random.randint(2, 9)
     if randomNumber not in numlist:
-        numlist.append(random.randint(2, 9))
+        numlist.append(randomNumber)
         spamFile = open('spam00{}.txt'.format(numlist[len(numlist)-1]), 'w')
         spamFile.write('Hello, there!\n')
         spamFile.close()
+p = Path.home()/'spam'
+os.chdir(p)
 
 folder = os.path.abspath(Path.cwd())
 folder = input("Enter the absolute path of the folder you'd like to search: ")

@@ -74,3 +74,6 @@ else:
 
     print('Include who you want to send to, ' +
           'followed by a message in the argument.')
+
+browser.quit()
+exit

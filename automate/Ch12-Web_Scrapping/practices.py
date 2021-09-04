@@ -3,7 +3,6 @@ import bs4
 from selenium import webdriver
 import requests
 import webbrowser
-from selenium.webdriver.common import keys
 webbrowser.open('http://inventwithpython.com/')
 # 用requests.get()函式下載某個網頁
 res = requests.get('https://automatetheboringstuff.com/files/rj.txt')
@@ -31,6 +30,7 @@ res = requests.get('http://nostarch.com')
 res.raise_for_status()
 noStarchSoup = bs4.BeautifulSoup(res.text, 'html.parser')
 type(noStarchSoup)
+noStarchSoup
 # bs4 select()
 exampleFile = open(
     'C:/Users/steve/Documents/GitHub/python-training/automate/Ch12-Web_Scrapping/example.html')
@@ -66,10 +66,10 @@ linkElem.click()
 # 填寫和提交表單
 browser.get('https://login.metafilter.com')
 userElem = browser.find_element_by_id('user_name')
-userElem.send_keys('your_real_username_here')
+userElem.send_keys('steven')
 
 passwordElem = browser.find_element_by_id('user_pass')
-passwordElem.send_keys('your_real_password_here')
+passwordElem.send_keys('123456')
 passwordElem.submit()
 # 傳送特殊按鍵
 # browser = webdriver.Firefox()

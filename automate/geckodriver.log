@@ -1,0 +1,46 @@
+1630826139167	geckodriver	INFO	Listening on 127.0.0.1:58354
+1630826142275	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\steve\\AppData\\Local\\Temp\\rust_mozprofileRmvIbl"
+1630826142800	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\steve\\AppData\\Local\\Temp\\rust_mozprofileRmvIbl\\search.json.mozlz4", (void 0)))
+1630826146584	Marionette	INFO	Listening on port 63978
+1630826147099	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.billboard.com/charts/hot-100, line 4398: TypeError: document.getElementById(...) is null
+SourceActor threw an exception: [Exception... "Failed to open input source 'file:///'"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:442:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:406:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2142:35
+addAllSources@resource://devtools/server/actors/thread.js:1509:14
+watch@resource://devtools/server/actors/resources/sources.js:52:17
+watchResources@resource://devtools/server/actors/resources/index.js:239:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:156:24
+addWatcherDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:47:20
+_addWatcherDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:483:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:425:21
+Line: 670, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: NS_ERROR_FAILURE: Failed to open input source 'file:///'
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+console.error: "Tried to send a 'target-destroyed-form' event on an already destroyed actor 'watcher'"
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:126:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:814:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:699:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 126, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 126))
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: https://ssl.p.jwpcdn.com/player/v/8.21.2/jwplayer.core.controls.js, line 10: TypeError: z is null
+JavaScript error: https://www.billboard.com/charts/hot-100, line 4397: TypeError: document.getElementById(...) is null
+1630831003129	Marionette	INFO	Stopped listening on port 63978
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

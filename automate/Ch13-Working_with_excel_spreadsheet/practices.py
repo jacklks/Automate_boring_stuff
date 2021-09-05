@@ -38,6 +38,7 @@ column_index_from_string('AA')
 tuple(sheet['A1':'C3']) # Get all cells from A1 to C3.
 for rowOfCellObjects in sheet['A1':'C3']:
     for cellObj in rowOfCellObjects:
+        print(cellObj)
         print(cellObj.coordinate, cellObj.value)
     print('---- END of ROW ----')
 sheet = wb.active
@@ -129,7 +130,7 @@ wb = openpyxl.Workbook()
 sheet = wb.active
 for i in range(1, 11): # create some data in column A
     sheet['A' + str(i)] = i
-refObj = openpyxl.chart.Reference(sheet, min_col=1, min_row=1, max_col=1, max_row=10)
+refObj = openpyxl.chart.Reference(sheet, 1, 1, 1, 10)
 seriesObj = openpyxl.chart.Series(refObj, title='First series')
 chartObj = openpyxl.chart.BarChart()
 chartObj.title = 'My Chart'

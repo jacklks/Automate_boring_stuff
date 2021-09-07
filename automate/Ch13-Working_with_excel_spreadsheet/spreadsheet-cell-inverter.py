@@ -18,18 +18,20 @@ outputFile = '{0}_inverted{1}'.format(*os.path.splitext(inputFile))
 if os.path.exists(outputFile):
     print('Destination file {0} already exists'.format(outputFile))
     sys.exit(-3)
-inputWb = openpyxl.load_workbook(inputFile)
+inputWb = openpyxl.load_workbook('example.xlsx')
 inputSheet = inputWb.active
 outputWb = openpyxl.Workbook()
 outputSheet = outputWb.active
 maxRow = inputSheet.max_row
 maxCol = inputSheet.max_column
+maxRow
+maxCol
 for i in range(1, max(maxRow, maxCol)+1):
     for j in range(1, min(maxRow, maxCol)+1):
         outputSheet.cell(row=i, column=j).value = inputSheet.cell(
             row=j, column=i).value
         outputSheet.cell(row=j, column=i).value = inputSheet.cell(
             row=i, column=j).value
-outputWb.save(outputFile)
+outputWb.save('example1.xlsx')
 inputWb.save(inputFile)
 print('File inverted successfully')

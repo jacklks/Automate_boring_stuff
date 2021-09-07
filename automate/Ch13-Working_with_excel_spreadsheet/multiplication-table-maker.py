@@ -1,5 +1,5 @@
 import openpyxl
-from openpyxl.utils import get_column_letter, column_index_from_string
+from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font
 wb = openpyxl.Workbook()
 sheet = wb.active

@@ -13,6 +13,7 @@ if len(sys.argv) < 2:
     sys.exit()
 location = ' '.join(sys.argv[1:])
 # Download the JSON data from openweathermap.org's API
+# 我將網址修改成當前天氣結果/weather並加入&units=metric將溫度轉成攝氏
 url = 'http://api.openweathermap.org/data/2.5/weather?q=%s&APPID=%s&units=metric' % (
     location, APPID)
 response = requests.get(url)

@@ -37,7 +37,7 @@ for row in exampleDictReader:
     print(row['time'], row['name'], row['amount'])
 # DictWriter write csv
 outputFile = open('output.csv', 'w', newline='')
-outputDictWriter = csv.DictWriter(outputFile, ['Name', 'Pet', 'Phone'])
+outputDictWriter = csv.DictWriter(outputFile, ['Name', 'Pet', 'Phone'],delimiter='\t')
 outputDictWriter.writeheader()
 outputDictWriter.writerow({'Name': 'Alice', 'Pet': 'cat', 'Phone': '555-1234'})
 outputDictWriter.writerow({'Name': 'Bob', 'Phone': '555-9999'})

@@ -2,3 +2,5 @@
 automate/Ch18-Sending_Email_Text/token.json
 automate/Ch18-Sending_Email_Text/token01.json
 automate/Ch18-Sending_Email_Text/credentials.json
+automate/geckodriver.exe
+automate/Ch16-Working_with_csv_json/env.py
